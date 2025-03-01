@@ -23,6 +23,15 @@ body {
   border-radius: 10px;
   margin: 1em 0 2em 0;
   padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.hide{
+  display: none;
 }
 
 h1 {
