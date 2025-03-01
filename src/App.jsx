@@ -21,8 +21,8 @@ const App = () => {
       <div className="container">
         <div>
           <h1>Explore the Japense language!!!</h1>
-          <p>Try to memorize the vocabularies that is used in daily life!</p>
-          <p> {count + 1} / 10</p>
+          <h2>Try to memorize the vocabularies that is used in daily life!</h2>
+          <h2> {count + 1} / 10</h2>
         </div>
 
         <div className="card">

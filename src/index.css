@@ -1,5 +1,11 @@
+body {
+  background-image: url(src/assets/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .container {
-  padding-top: 4em;
+  padding-top: 7em;
   margin: auto;
   width: 80%;
   text-align: center;
@@ -20,8 +26,12 @@
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 3em;
   line-height: 1.1;
+}
+h2{
+  font-weight: 100;
+  font-size: 1.2em;
 }
 
 .container_button {
@@ -30,4 +40,14 @@ h1 {
 }
 
 button {
+  border: 1px solid transparent;
+  background-color: cadetblue;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+button:hover {
+  background-color: cornflowerblue;
+  cursor: pointer;
 }
