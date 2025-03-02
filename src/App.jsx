@@ -36,6 +36,7 @@ const App = () => {
           <div className={flip ? "hide" : ""}>
             <p>{vocabs.japanese}</p>
             <p>{vocabs.romanji}</p>
+            <img src={vocabs.pic} alt="a pic" height="100px" width="100px"/>
           </div>
 
           <p>{flip && vocabs.english}</p>

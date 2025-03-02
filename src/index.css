@@ -27,10 +27,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;
+  height: 250px;
 }
 
-.hide{
+
+.hide {
   display: none;
 }
 
@@ -38,7 +39,7 @@ h1 {
   font-size: 3em;
   line-height: 1.1;
 }
-h2{
+h2 {
   font-weight: 100;
   font-size: 1.2em;
 }
