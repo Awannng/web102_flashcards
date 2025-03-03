@@ -30,6 +30,10 @@ body {
   height: 250px;
 }
 
+.card:active {
+  transform: rotateY(180deg);
+  transition: ease-in-out transform 0.5s;
+}
 
 .hide {
   display: none;

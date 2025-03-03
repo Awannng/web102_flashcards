@@ -25,7 +25,10 @@ const App = () => {
       <div className="container">
         <div>
           <h1>Explore the Japense language!!!</h1>
-          <h2>Try to memorize the vocabularies that is used in daily life!</h2>
+          <h2>
+            Try to memorize the vocabularies that is being used in daily
+            conversation!
+          </h2>
           <h2>
             {count + 1} / {vocab.length}
           </h2>
@@ -33,13 +36,15 @@ const App = () => {
 
         {/* Display the flashcards */}
         <div className="card" onClick={handelFlip}>
-          <div className={flip ? "hide" : ""}>
-            <p>{vocabs.japanese}</p>
-            <p>{vocabs.romanji}</p>
-            <img src={vocabs.pic} alt="a pic" height="100px" width="100px"/>
-          </div>
+          <div className="card_inner">
+            <div className={flip ? "hide" : ""}>
+              <p>{vocabs.japanese}</p>
+              <p>{vocabs.romanji}</p>
+              <img src={vocabs.pic} alt="a image of the vocabulary" height="100px" width="100px" />
+            </div>
 
-          <p>{flip && vocabs.english}</p>
+            <p>{flip && vocabs.english}</p>
+          </div>
         </div>
 
         {/* Buttons for going back and forth */}

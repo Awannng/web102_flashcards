@@ -2,9 +2,9 @@
 
 Submitted by: **Jing Wang**
 
-This web app: **insert description**
+This web app: **A flashcard study guide for basic Japanese vocabularies. The front of the card is Japanese and when click on the card, the back is the English meaning.**
 
-Time spent: **2** hours spent in total
+Time spent: **4** hours spent in total
 
 ## Required Features
 
@@ -18,21 +18,20 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 
-- [ ] Cards contains images in addition to or in place of text
+- [x] Cards contains images in addition to or in place of text
 - [ ] Cards have different visual styles such as color based on their category
-- [ ] *visual style implemented*
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented required features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='src/assets/flashcard1.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with LICEcap
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+One challange that I had was the flipping animation. I was stuck with how to make an animation of flipping a card when user click on it. But through searching and test and error, I were able to make the animation work. 
 
 ## License
 
