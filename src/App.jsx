@@ -6,7 +6,6 @@ const App = () => {
   const [flip, setFlip] = useState(false);
   const [answer, setAnswer] = useState("");
   const [correctAnswer, setCorrectAnswer] = useState(false);
-  const [countChar, setCountChar] = useState(0);
   const [streak, setStreak] = useState(0);
   const [longestStreak, setLongestStreak] = useState(0);
   const vocabs = vocab[count];
@@ -45,7 +44,7 @@ const App = () => {
         countChar += 1;
       }
     }
-
+    // if the mispell is under 2 characters, still mark correct
     if (vocabs.english.length - countChar <= 2) {
       setCorrectAnswer(true);
       setStreak((prevStreak) => prevStreak + 1);
@@ -54,6 +53,14 @@ const App = () => {
       setLongestStreak(Math.max(streak, longestStreak));
       setStreak(0);
     }
+  };
+
+  const shuffleCard = () => {
+    for (let i = vocab.length - 1; i > 0; i--) {
+      const rand = Math.floor(Math.random() * (i + 1));
+      [vocab[i], vocab[rand]] = [vocab[rand], vocab[i]];
+    }
+    setCount(0);
   };
 
   return (
@@ -109,6 +116,7 @@ const App = () => {
         <div className="container_button">
           <button onClick={backCard}>Back</button>
           <button onClick={nextCard}>Next</button>
+          <button onClick={shuffleCard}>Shuffle</button>
         </div>
       </div>
     </>
