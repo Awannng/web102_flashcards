@@ -6,6 +6,7 @@ const App = () => {
   const [flip, setFlip] = useState(false);
   const [answer, setAnswer] = useState("");
   const [correctAnswer, setCorrectAnswer] = useState(false);
+  const [countChar, setCountChar] = useState(0);
   const [streak, setStreak] = useState(0);
   const [longestStreak, setLongestStreak] = useState(0);
   const vocabs = vocab[count];
@@ -29,9 +30,23 @@ const App = () => {
     setFlip(!flip);
   };
 
-  //checks of the answer is correct compares to the meaning
+  //checks of the answer is correct compares to the meaning and update the streak and longestStreak
   const checkAnswer = () => {
-    if (answer.toLowerCase() == vocab[count].english.toLowerCase()) {
+    if (streak > count) {
+      return;
+    }
+    if (answer.length > vocabs.english.length) {
+      setCorrectAnswer(false);
+    }
+
+    let countChar = 0;
+    for (let i = 0; i < answer.length; i++) {
+      if (answer[i].toLowerCase() == vocabs.english[i].toLowerCase()) {
+        countChar += 1;
+      }
+    }
+
+    if (vocabs.english.length - countChar <= 2) {
       setCorrectAnswer(true);
       setStreak((prevStreak) => prevStreak + 1);
     } else {
