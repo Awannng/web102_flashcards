@@ -48,6 +48,23 @@ h2 {
   font-size: 1.2em;
 }
 
+.type-answer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+input.false {
+  outline: none;
+  border: 3px solid red;
+}
+
+input.correct {
+  outline: none;
+  border: 3px solid green;
+}
+
 .container_button {
   display: flex;
   gap: 10px;
